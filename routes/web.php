@@ -53,3 +53,20 @@ Route::get('/user/{name?}', function ($name=null) {
 //Perubahan
 Route::get('/user/{name?}', function ($name='John') { return 'Nama saya '.$name;
 });
+
+
+// Route Name
+Route::get('/user/profile', function () {
+    //
+    })->name('profile');
+    
+    Route::get(
+    '/user/profile', [UserProfileController::class, 'show']
+    )->name('profile');
+    
+    // Generating URLs...
+    $url = route('profile');
+    
+    // Generating Redirects...
+    return redirect()->route('profile');
+    
