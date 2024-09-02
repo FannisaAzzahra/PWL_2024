@@ -28,3 +28,17 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return 'NIM: 2241760102, Nama: Fannisa Azzahra'; 
 });
+
+// Route Parameters
+Route::get('/user/{name}', function ($name) { return 'Nama saya '.$name;
+});
+
+//Suatu route, juga bisa menerima lebih dari 1 parameter
+Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
+    return 'Pos ke-'.$postId." Komentar ke-: ".$commentId;
+});
+    
+
+Route::get('/articles/{id}', function ($id) {
+    return 'Halaman Artikel dengan ID ' . $id;
+});
