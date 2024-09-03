@@ -14,5 +14,6 @@ class WelcomeController extends Controller
             ->with('name','Fannisa')
             ->with('occupation','Astronaut');
             
+            
         }
 }

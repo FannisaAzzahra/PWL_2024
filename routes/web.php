@@ -24,7 +24,7 @@ use App\Http\Controllers\PageController;
 
 //Praktikum 2
 // Route::get('/hello', [WelcomeController::class,'hello']);
-
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
 
 //no. 6
 Route::get('/', [PageController::class,'index']);
@@ -48,6 +48,7 @@ Route::resource('photos', PhotoController::class)->except([ 'create', 'store', '
 
 // -----------------------------------------------
 
+
 // //Praktikum 3
 // Route::get('/greeting', function () {
 //     return view('blog.hello', ['name' => 'Fannisa']);
@@ -60,6 +61,7 @@ Route::resource('photos', PhotoController::class)->except([ 'create', 'store', '
 Route::get('/about', function () {
     return 'NIM: 2241760102, Nama: Fannisa Azzahra'; 
 });*/
+
 
 
 // Route Parameters
